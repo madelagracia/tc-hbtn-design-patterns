@@ -1,0 +1,16 @@
+import java.util.List;
+
+public abstract class Bebida {
+
+    private List<String> ingredientes;
+    private double preco;
+
+    public abstract List<String> obterIngredientes();
+
+    public abstract double obterPreco();
+
+    @Override
+    public String toString() {
+        return String.format("Preco: %.2f - Ingredientes: %s", obterPreco(), obterIngredientes());
+    }
+}
